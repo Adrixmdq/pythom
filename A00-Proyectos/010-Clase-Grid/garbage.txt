@@ -1,0 +1,59 @@
+  <table>
+            <thead>
+              <tr>
+                <th>Mes</th>
+                <th>Valor</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Enero</td>
+                <td>10 %</td>
+              </tr>
+              <tr>
+                <td>Febrero</td>
+                <td>10 %</td>
+              </tr>
+              <tr>
+                <td>Marzo</td>
+                <td>10 %</td>
+              </tr>
+              <tr>
+                <td>Abril</td>
+                <td>10 %</td>
+              </tr>
+              <tr>
+                <td>Mayo</td>
+                <td>10 %</td>
+              </tr>
+              <tr>
+                <td>Junio</td>
+                <td>10 %</td>
+              </tr>
+              <tr>
+                <td>Julio</td>
+                <td>10 %</td>
+              </tr>
+              <tr>
+                <td>Agosto</td>
+                <td>8</td>
+              </tr>
+              <tr>
+                <td>Septiembre</td>
+                <td>10 %</td>
+              </tr>
+              <tr>
+                <td>Octubre</td>
+                <td>10 %</td>
+              </tr>
+              <tr>
+                <td>Noviembre</td>
+                <td>10 %</td>
+              </tr>
+              <tr>
+                <td>Diciembre</td>
+                <td>10 %/td>
+              </tr>
+            </tbody>
+          </table>
+        </div>

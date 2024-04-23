@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+  <title>Variacion de los salarios frente a la inflación</title>
+  <link rel="stylesheet" href="./css/estiloGrid2.css">
+  <link rel="stylesheet" href="./css/estiloInfo.css">
+  <link rel="icon" type="image/x-icon" href="./imagenes/favicon32.png" />
+</head>
+
+<body>
+  <section class="container">
+    <div class="item header"></div>
+    <div class="item menu">
+      <nav class="menu">
+        <button class="menu-btn" onclick="mostrarPartes(1)">Inflación</button>
+        <button class="menu-btn" onclick="mostrarPartes(2)">Sueldos</button>
+        <button class="menu-btn"onclick="mostrarPartes(3)">Comparación</button>
+        <button class="menu-btn"onclick="mostrarPartes(4)">Contáctenos</button>
+        <div class="dropdown">
+          <button class="dropbtn" onclick="cerrarNavbar()">&#9776; Menú</button>
+          <div class="dropdown-content" id="contenidoDropDown">
+            <a href="#" onclick="cerrarNavbar(); mostrarPartes(1)">Inflación </a>
+            <a href="#" onclick="cerrarNavbar() ; mostrarPartes(2)">Sueldo</a>
+            <a href="#" onclick="cerrarNavbar() ; mostrarPartes(3)">Comparación </a>
+            <a href="#" onclick="cerrarNavbar() ; mostrarPartes(4)">Contáctenos </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="item content">
+      <div id="Contaniner1" class="infoContaniner1">
+        <div class="infoDatos">
+          <div class="TituloContainer">Variacion Anual de la inflacion</div>
+          <label for="year">Año:</label>
+          <input type="number" id="year" name="year" min="1900" max="2100" required>
+          <button onclick="consultar()">Consultar</button>
+          <table>
+            <tr>
+              <th>Nombre</th>
+              <th>Edad</th>
+            </tr>
+            <tr>
+              <td>Persona 1</td>
+              <td>30</td>
+            </tr>
+            <tr>
+              <td>Persona 2</td>
+              <td>25</td>
+            </tr>
+            <!-- Agrega más filas según sea necesario -->
+          </table>
+        </div>
+        <div class="infoTabla">
+          <div class="TituloContainer">Gráfico</div>
+
+          <div class="chart"></div>
+        </div>
+      </div>
+      <div id="Contaniner2" class="infoContaniner2">
+        <div class="infoDatos">
+          <div class="TituloContainer">Variacion de nuestros sueldos</div>
+          <label for="year">Año:</label>
+          <input type="number" id="year" name="year" min="1900" max="2100" required>
+          <button onclick="consultar()">Consultar</button>
+          <table>
+            <tr>
+              <th>Nombre</th>
+              <th>Edad</th>
+            </tr>
+            <tr>
+              <td>Persona 1</td>
+              <td>30</td>
+            </tr>
+            <tr>
+              <td>Persona 2</td>
+              <td>25</td>
+            </tr>
+            <!-- Agrega más filas según sea necesario -->
+          </table>
+        </div>
+        <div class="infoTabla">
+          <div class="TituloContainer">Gráfico</div>
+          <div class="chart"></div>
+        </div>
+      </div>
+      <div id="Contaniner3" class="infoContaniner3">
+
+        <div class="infoDatos">
+          <div class="TituloContainer">Comparacion entre la inflacion y los sueldos</div>
+          <label for="year">Año:</label>
+          <input type="number" id="year" name="year" min="1900" max="2100" required>
+          <button onclick="consultar()">Consultar</button>
+          <table>
+            <tr>
+              <th>Nombre</th>
+              <th>Edad</th>
+            </tr>
+            <tr>
+              <td>Persona 1</td>
+              <td>30</td>
+            </tr>
+            <tr>
+              <td>Persona 2</td>
+              <td>25</td>
+            </tr>
+            <!-- Agrega más filas según sea necesario -->
+          </table>
+        </div>
+        <div class="infoTabla">
+          <div class="TituloContainer">Gráfico</div>
+          <div class="chart"></div>
+        </div>
+      </div>
+    </div>
+    <div class="item footer"> Todos los derechos resevados</div>
+  </section>
+  <script>
+    function mostrarPartes(num) {
+
+      document.getElementById('Contaniner1').style.display = 'none';
+      document.getElementById('Contaniner2').style.display = 'none';
+      document.getElementById('Contaniner3').style.display = 'none';
+      if (num === 1) {
+        document.getElementById('Contaniner1').style.display = 'flex';
+      } else if (num === 2) {
+        document.getElementById('Contaniner2').style.display = 'flex';
+      }else if (num === 3) {
+        document.getElementById('Contaniner3').style.display = 'flex';
+      };
+    }
+    function cerrarNavbar() {
+      if (document.getElementById('contenidoDropDown').style.display == 'none')
+        document.getElementById('contenidoDropDown').style.display = 'block';
+      else
+        document.getElementById('contenidoDropDown').style.display = 'none';
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    padding: 0;
+  }
+  /*esta es la parte de grid donde defino las areas*/
+  .header, .menu { 
+    position: sticky;
+    top: 0;
+  }
+  .container {
+    /* usando grid especifico como es mi matriz */
+    display: grid;                      
+    grid-template-rows: 1fr 8fr 1fr ;
+    grid-template-columns: 1fr 9fr ;
+    /*usando grid especifico como se componen cada fila columna*/
+    grid-template-areas: "header menu" "content content" "footer footer";
+    min-height: 100vh;
+  }
+  .header {
+    grid-area: header;
+    color: white;
+    background-color: #1E89CA; /* #0d3f5e;*/
+    background-image: url('../imagenes/header.svg'); /* Ruta de tu imagen */
+    background-size: cover; /* Opcional: ajusta la imagen al tamaño del div */
+  }
+  
+   
+ .footer {
+    grid-area: footer;
+    color: white;
+    background-color: #1E89CA; /* #0d3f5e;*/
+  }
+  .content {
+    grid-area: content;
+    background-color: white;
+    color: white;
+  }
+  .menu {
+    grid-area: menu;
+    background-color: #1E89CA; /* #0d3f5e;*/
+    color: white;
+    display: flex;                  /* con esto acomodo los botones*/
+    justify-content: space-between;
+    align-items: center;
+ 
+  }
+  .item{
+    padding: 10px;
+    border-radius: 10px;
+  }
+/* aca empiezo con flex para  darle un estilo mejorado*/
+  /* los botones del menu*/
+ .menu-btn {
+    background: none;
+    border: 1px;
+    padding-left: 10px;
+    color: white;
+    font-size: 2dvw;
+    margin: 0 10px;
+    cursor: pointer;
+  }
+/*los botones*/
+.dropdown {
+    display: none; /*lo marco que no se vea y dependiendo de la pantalla aparece*/
+    position: relative;
+
+  }
+  
+  .dropdown .dropbtn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    min-width: 100px; /*acomodo para mostrar bien los menues*/
+    margin-left: auto; /* Alinea el botón desplegable a la derecha */
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #1E89CA;
+    z-index: 1;
+}
+  
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #666;
+  }
+
+  /**/
+@media screen and (max-width: 853px) {
+    .menu-btn {
+      display: none;
+    }
+    .dropdown {
+      display: inline-block;
+    }
+    .dropdown-content {
+      display: none;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .menu{
+        justify-content: flex-end;    }
+  }
