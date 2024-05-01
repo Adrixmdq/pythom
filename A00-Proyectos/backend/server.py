@@ -8,10 +8,10 @@ CORS(app)
 @app.route('/datos')
 def get_products():
     # Cargar los datos del archivo JSON
-    with open('./datos.json', 'r') as f:
+    with open('datos.json', 'r') as f:
         data = json.load(f)
     
-    return jsonify(data)
+    return 'hola'#jsonify(data)
 # Ruta para obtener los datos filtrados por año
 @app.route('/datos/<int:year>')
 def get_datos_by_year(year):
