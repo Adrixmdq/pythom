@@ -62,3 +62,9 @@ print ('-',miSet - miOtroSet,' resta ')
 print ('&',miSet & miOtroSet, ' interseccion ')
 print ('|',miSet | miOtroSet,' union ')
 print ('^',miSet ^ miOtroSet,'diferencia')
+
+## DICTIONARY
+# 
+print('************************************************************')
+print(' DICT -> '
+      )
