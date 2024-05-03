@@ -64,7 +64,33 @@ print ('|',miSet | miOtroSet,' union ')
 print ('^',miSet ^ miOtroSet,'diferencia')
 
 ## DICTIONARY
-# 
+# son set , pero relacion clave valor
 print('************************************************************')
 print(' DICT -> '
       )
+miDiccionario = dict()
+print(type(miDiccionario))
+miDiccionario = { "nombre":"adrian","edad":"54",1:"busca lleno de esperanzas"}
+print(miDiccionario)
+print(len(miDiccionario))
+print(miDiccionario["nombre"])
+print(miDiccionario[1])
+miDiccionario[2]= "Esto es nuevo"
+print(miDiccionario)
+del  miDiccionario[2]
+print(miDiccionario)
+print("nombre" in miDiccionario)
+print (miDiccionario.items())
+print (miDiccionario.keys())
+print (miDiccionario.values())
+myNewDiccionario = miDiccionario.fromKeys(miDiccionario)
+print(myNewDiccionario)
+#transformo en una lista
+print(list(miDiccionario))
+print(tupla(miDiccionario))
+print(set(miDiccionario))
+
+
+
+
+
