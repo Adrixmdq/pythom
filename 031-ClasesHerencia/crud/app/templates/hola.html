@@ -1,0 +1,21 @@
+<!doctype html>
+<h1> renderizado por Jinja </h1>
+<title>Hello from Flask</title>
+{% if person %}
+  <h1>Hello {{ person }}!</h1>
+{% else %}
+  <h1>Hello, World!</h1>
+{% endif %}
+<nav>
+        <ul>
+            <li>
+                <a href="/">Home</a>
+            </li>
+            <li>
+                <a href="/hello">hello</a>
+            </li>
+            <li>
+                <a href="/hello/adrii">hola adri</a>
+            </li>
+        </ul>
+    </nav>
